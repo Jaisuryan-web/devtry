@@ -4,7 +4,7 @@ import google.generativeai as genai
 from dotenv import load_dotenv
 import os
 
-# Load .env
+# Loading .env
 load_dotenv()
 
 app = Flask(__name__)
@@ -16,7 +16,7 @@ genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
 model = genai.GenerativeModel("gemini-2.5-flash")
 
 # ----------------------------
-# Load CSV
+# Load CSV format data
 # ----------------------------
 df = pd.read_csv("qa_data (1).csv")
 
